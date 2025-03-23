@@ -6,7 +6,7 @@ Ensure the following are installed on your system:
 
 1. Node.js (v16 or higher): Download from Node.js official website[1].
 2. npm (comes with Node.js).
-3. MongoDB: Ensure a running MongoDB instance (local or cloud-based like MongoDB Atlas)[2].
+3. MongoDB: Ensure a running MongoDB instance (local or cloud-based like MongoDB Atlas).
 
 ## Step 1: Clone the Repository
 
@@ -37,6 +37,8 @@ npm install
 
 ### 2. Configure Environment Variables
 
+ #### *Inside Server Folder in index.js file there is code to populate the database uncomment it on the first run then afterwards comment it again*  
+
 Create a `.env` file in the backend folder and add the following:
 
 ```
@@ -49,6 +51,10 @@ Replace `` with your MongoDB connection string. If you're using MongoDB Atlas, i
 ```
 mongodb+srv://:@cluster.mongodb.net/?retryWrites=true&w=majority
 ```
+
+
+
+
 
 ### 3. Start Backend Server
 
