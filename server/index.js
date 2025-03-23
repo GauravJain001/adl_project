@@ -38,13 +38,13 @@ mongoose
     app.listen(PORT, () => console.log(`✅ Server running on port: ${PORT}`));
 
     /* ADD DATA ONE TIME ONLY */
-    // const existingData = await KPI.find();
-    // if (existingData.length === 0) {
-    //   console.log("🌱 Seeding initial data...");
-    //   await KPI.insertMany(kpis);
-    //   await Product.insertMany(products);
-    //   await Transaction.insertMany(transactions);
-    //   console.log("✅ Data seeded successfully!");
-    // }
+    const existingData = await KPI.find();
+    if (existingData.length === 0) {
+      console.log("🌱 Seeding initial data...");
+      await KPI.insertMany(kpis);
+      await Product.insertMany(products);
+      await Transaction.insertMany(transactions);
+      console.log("✅ Data seeded successfully!");
+    }
   })
   .catch((error) => console.log(`❌ MongoDB Error: ${error.message}`));
